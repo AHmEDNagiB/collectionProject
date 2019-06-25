@@ -1,17 +1,25 @@
 package Lists;
 
 import DTO.Employee;
+import utils.Fillers.Filler;
+import utils.Generators.EmployeeGenerator;
+import utils.Generators.Generator;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class LinkedListClass {
-    LinkedList<Employee> employeeArrayList = new LinkedList<>();
+    private LinkedList<Employee> employeeLinkedList = new LinkedList<>();
+    private Generator generator = new EmployeeGenerator();
+    private Filler filler = new Filler();
 
     public LinkedListClass() {
-//        this.fillLists();
+        filler.fill(2, generator, this.employeeLinkedList);
         System.out.print("Initial List : ");
-        System.out.println(this.employeeArrayList);
-//        this.manipulateList();
+        System.out.println(this.employeeLinkedList);
+        this.manipulateList();
+    }
+
+    private void manipulateList() {
+//        this.employeeLinkedList.
     }
 }

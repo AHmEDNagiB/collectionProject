@@ -1,16 +1,16 @@
 package Lists;
 
 import DTO.Employee;
-import Fillers.Filler;
-import Generators.EmployeeGenerator;
-import Generators.Generator;
+import utils.Fillers.Filler;
+import utils.Generators.EmployeeGenerator;
+import utils.Generators.Generator;
 
 import java.util.ArrayList;
 
 public class ArrayListClass {
-    ArrayList<Employee> employeeArrayList = new ArrayList<>();
-    Generator generator = new EmployeeGenerator();
-    Filler filler = new Filler();
+    private ArrayList<Employee> employeeArrayList = new ArrayList<>();
+    private Generator generator = new EmployeeGenerator();
+    private Filler filler = new Filler();
 
     public ArrayListClass() {
         filler.fill(2, generator, this.employeeArrayList);
@@ -27,7 +27,7 @@ public class ArrayListClass {
 //        }
 //    }
 
-    public void manipulateList() {
+    private void manipulateList() {
         Employee e = generator.genetrate(5);
         this.employeeArrayList.add(e);
         System.out.print("List After Adding Item : ");
@@ -48,7 +48,7 @@ public class ArrayListClass {
     }
 
 
-    public void testEquals() {
+    private void testEquals() {
         Employee e1 = generator.genetrate(1);
         Employee e2 = generator.genetrate(2);
 
@@ -84,7 +84,7 @@ public class ArrayListClass {
 
     }
 
-    public void testClone() {
+    private void testClone() {
         System.out.println("clone : " + this.employeeArrayList.clone());
         ArrayList<Employee> employeeClonedList = (ArrayList<Employee>) this.employeeArrayList.clone();
         ArrayList<Employee> employeeSameList = this.employeeArrayList;
@@ -116,7 +116,7 @@ public class ArrayListClass {
 
     }
 
-    public void testRemoveAll(ArrayList<Employee> l1, ArrayList<Employee> l2) {
+    private void testRemoveAll(ArrayList<Employee> l1, ArrayList<Employee> l2) {
         System.out.println("######## Test removeAll #########");
         System.out.println("l1 : " + l1);
         System.out.println("l2 : " + l2);
@@ -125,7 +125,7 @@ public class ArrayListClass {
 
     }
 
-    public void testRemoveIf(ArrayList<Employee> l1, ArrayList<Employee> l2) {
+    private void testRemoveIf(ArrayList<Employee> l1, ArrayList<Employee> l2) {
         System.out.println("######## Test testRemoveIf #########");
         System.out.println("l1 : " + l1);
         System.out.println("l2 : " + l2);

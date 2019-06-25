@@ -1,6 +1,6 @@
-package Fillers;
+package utils.Fillers;
 
-import Generators.Generator;
+import utils.Generators.Generator;
 
 import java.util.ArrayList;
 import java.util.HashSet;

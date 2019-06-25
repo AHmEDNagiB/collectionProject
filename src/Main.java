@@ -1,9 +1,9 @@
-import Lists.ArrayListClass;
+import Lists.ListsCaller;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        ArrayListClass myLists = new ArrayListClass();
+        ListsCaller myLists = new ListsCaller();
     }
 }
